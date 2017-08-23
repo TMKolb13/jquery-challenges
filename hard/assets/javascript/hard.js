@@ -35,6 +35,22 @@
    //code in here wont run until page loads
    $(function(){
 
+     $("h1").click(function(){
+       $("h1").toggleClass("red");
+     })
+
+     //$("h1").click(function(){
+    // if($("h1").css({color: "black"})){
+    //   $("h1").click(function(){
+    //     $("h1").css({color: "red"});
+    //    })
+    //   }
+    //
+    // if($("h1").css({color: "red"})){
+    //   $("h1").click(function(){
+    //     $("h1").css({color: "black"});
+    //     })
+    //   }
 
 
    })

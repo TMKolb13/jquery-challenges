@@ -42,7 +42,37 @@
   //code in here wont run until page loads
   $(function(){
 
+    //functionality for team 1 shoot button
+    $("#teamone-shoot").click(function(){
+      $("#teamone-numshots").html(parseInt($("#teamone-numshots").html()) + 1);
+      let randomNumber = Math.random();
+      if(randomNumber > .5){
+        $("#teamone-numhits").html(parseInt($("#teamone-numhits").html()) + 1);
+        $("body").css({background: "lightsalmon"});
+      }
 
+    })
+
+    //functionality for team 2 shoot button
+    $("#teamtwo-shoot").click(function(){
+      $("#teamtwo-numshots").html(parseInt($("#teamtwo-numshots").html()) + 1);
+      let randomNumber = Math.random();
+      if(randomNumber > .5){
+        $("#teamtwo-numhits").html(parseInt($("#teamtwo-numhits").html()) + 1);
+        $("body").css({background: "aqua"});
+      }
+
+    })
+
+    //functionality of reset button
+    $("#reset").click(function(){
+      $("#num-resets").html(parseInt($("#num-resets").html()) + 1);
+      $("#teamtwo-numhits").html(0);
+      $("#teamone-numshots").html(0);
+      $("#teamone-numhits").html(0);
+      $("#teamtwo-numshots").html(0);
+      $("#body").css({background: "white"});
+    })
 
   })
 

@@ -26,11 +26,32 @@
     return $('#save-me').val();
   }
 
+
+ function clearText() {
+   $('#save-me').val('');
+ }
+
   /**
    * Puts different text
    * @param {String} text the stuff you want to put in the box
    */
   function setText(text) {
-    return $('#save-me').val(text);
+    $('#save-me').val(text);
   }
+
+  //functionality for clicking the save button
+  //save item to local stoage
+  //clear text
+  saveButton.click(function(){
+    localStorage.setItem("text", getText());
+    clearText()
+  })
+
+  //functionality of clicking the load button
+  //display saved item in textbox
+  loadButton.click(function(){
+    setText(localStorage.getItem("text"))
+  })
+
+
 })();
